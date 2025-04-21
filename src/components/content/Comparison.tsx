@@ -69,7 +69,7 @@ const Comparison: React.FC = () => {
                target="_blank" 
                rel="noopener noreferrer" 
                className="flex items-center gap-3 p-4 bg-white dark:bg-gray-800 rounded-lg shadow-sm hover:shadow-md transition-shadow">
-              <img src="https://www.docker.com/wp-content/uploads/2023/04/docker-logo-black.png" 
+              <img src="https://images.icon-icons.com/2530/PNG/512/dockerhub_button_icon_151899.png" 
                    alt="Docker Hub" 
                    className="h-8 w-8 object-contain dark:invert" />
               <div>
