@@ -1,5 +1,5 @@
 import React from 'react';
-import { ShieldCheck, Key, AlertTriangle } from 'lucide-react';
+import { ShieldCheck, Key, AlertTriangle, Zap, Database } from 'lucide-react';
 
 const Security: React.FC = () => {
   return (
