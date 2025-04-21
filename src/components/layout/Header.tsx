@@ -44,7 +44,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
             </button>
             
             <Link to="/" className="flex items-center gap-2 text-gray-900 dark:text-white">
-              <img src="src/Assets/AXioDB.png" alt="" className="h-8 w-8 text-blue-500" />
+              <img src="/AXioDB.png" alt="" className="h-8 w-8 text-blue-500" />
               <span className="text-xl font-bold">AxioDB</span>
             </Link>
           </div>
