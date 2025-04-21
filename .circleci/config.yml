@@ -24,7 +24,7 @@ jobs:
       - run:
           name: Send client Files to server
           command: |
-            cd client/ && scp -o StrictHostKeyChecking=no -r ${PROJECT_NAME}/ ${SSH_USER}@${VM_IP}:/home/${SSH_USER}/
+            scp -o StrictHostKeyChecking=no -r ${PROJECT_NAME}/ ${SSH_USER}@${VM_IP}:/home/${SSH_USER}/
       - run:
           name: Check if Already Exists in Nginx Static Folder
           command: |
