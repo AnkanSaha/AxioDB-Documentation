@@ -25,78 +25,72 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
   }, []);
 
   return (
-    <header 
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        scrolled 
-          ? 'bg-white dark:bg-gray-900 shadow-md py-2' 
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
+          ? 'bg-white dark:bg-gray-900 shadow-md py-2'
           : 'bg-transparent py-4'
-      }`}
+        }`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-2">
-            <button 
+            <button
               className="md:hidden p-2 rounded-md text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
               onClick={toggleSidebar}
               aria-label={isSidebarOpen ? "Close sidebar" : "Open sidebar"}
             >
               {isSidebarOpen ? <X size={24} /> : <Menu size={24} />}
             </button>
-            
+
             <Link to="/" className="flex items-center gap-2 text-gray-900 dark:text-white">
-              <img src="/AXioDB.png" alt="" className="h-8 w-8 text-blue-500" />
+              <img src="/AXioDB.png" alt="AxioDB Logo" className="h-8 w-8" />
               <span className="text-xl font-bold">AxioDB</span>
             </Link>
           </div>
 
           <div className="hidden md:flex items-center gap-6">
-            <Link 
-              to="/features" 
-              className={`text-sm font-medium ${
-                location.pathname === '/features' 
-                  ? 'text-blue-500' 
+            <Link
+              to="/features"
+              className={`text-sm font-medium ${location.pathname === '/features'
+                  ? 'text-blue-500'
                   : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
-              }`}
+                }`}
             >
               Features
             </Link>
-            <Link 
-              to="/comparison" 
-              className={`text-sm font-medium ${
-                location.pathname === '/comparison' 
-                  ? 'text-blue-500' 
+            <Link
+              to="/comparison"
+              className={`text-sm font-medium ${location.pathname === '/comparison'
+                  ? 'text-blue-500'
                   : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
-              }`}
+                }`}
             >
               Comparison
             </Link>
-            <Link 
-              to="/installation" 
-              className={`text-sm font-medium ${
-                location.pathname === '/installation' 
-                  ? 'text-blue-500' 
+            <Link
+              to="/installation"
+              className={`text-sm font-medium ${location.pathname === '/installation'
+                  ? 'text-blue-500'
                   : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
-              }`}
+                }`}
             >
               Installation
             </Link>
-            <Link 
-              to="/usage" 
-              className={`text-sm font-medium ${
-                location.pathname === '/usage' 
-                  ? 'text-blue-500' 
+            <Link
+              to="/usage"
+              className={`text-sm font-medium ${location.pathname === '/usage'
+                  ? 'text-blue-500'
                   : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
-              }`}
+                }`}
             >
               Usage
             </Link>
-            <Link 
-              to="/api-reference" 
-              className={`text-sm font-medium ${
-                location.pathname === '/api-reference' 
-                  ? 'text-blue-500' 
+            <Link
+              to="/api-reference"
+              className={`text-sm font-medium ${location.pathname === '/api-reference'
+                  ? 'text-blue-500'
                   : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
-              }`}
+                }`}
             >
               API
             </Link>
@@ -121,7 +115,7 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
                 {searchOpen ? <X size={20} /> : <Search size={20} />}
               </button>
             </div>
-            
+
             <button
               className="p-2 rounded-md text-gray-500 hover:text-blue-500 dark:text-gray-400 dark:hover:text-blue-400"
               onClick={toggleTheme}
