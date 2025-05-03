@@ -9,6 +9,8 @@ import ApiReference from './components/content/ApiReference';
 import Security from './components/content/Security';
 import Community from './components/content/Community';
 import Comparison from './components/content/Comparison';
+import CreateDatabase from './components/content/CreateDatabase';
+import CreateCollection from './components/content/CreateCollection';
 
 function App() {
   return (
@@ -24,6 +26,8 @@ function App() {
           <Route path="/security" element={<Security />} />
           <Route path="/community" element={<Community />} />
           <Route path="/comparison" element={<Comparison />} />
+          <Route path="/create-database" element={<CreateDatabase />} />
+          <Route path="/create-collection" element={<CreateCollection />} />
         </Routes>
       </Layout>
     </Router>
