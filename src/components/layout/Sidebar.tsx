@@ -25,17 +25,16 @@ const sidebarSections: SidebarSection[] = [
     ]
   },
   {
-    title: "Installation & Usage",
+    title: "Installation & Setup",
     items: [
       { id: "installation", label: "Installation", path: "/installation" },
-      { id: "usage", label: "Basic Usage", path: "/usage" },
+      { id: "create-database", label: "Create Database", path: "/create-database" },
+      { id: "create-collection", label: "Create Collection", path: "/create-collection" },
     ]
   },
   {
     title: "Basic Usage",
     items: [
-      { id: "create-database", label: "Create Database", path: "/create-database" },
-      { id: "create-collection", label: "Create Collection", path: "/create-collection" },
       { id: "operations", label: "Operations", path: "/usage" },
     ]
   },
