@@ -19,6 +19,7 @@ const sidebarSections: SidebarSection[] = [
     items: [
       { id: "introduction", label: "Introduction", path: "/" },
       { id: "features", label: "Features", path: "/features" },
+      { id: "pain-points", label: "Pain Points", path: "/#pain-points" },
       { id: "comparison", label: "Performance Comparison", path: "/comparison" },
       { id: "limitations", label: "Current Limitations", path: "/features#limitations" },
       { id: "future-plans", label: "Future Plans", path: "/features#future-plans" },
@@ -116,8 +117,8 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setActiveSection }) => {
                     <a
                       href={item.path}
                       className={`block py-1 text-sm ${location.pathname === item.path || (location.hash && item.path.includes(location.hash))
-                          ? 'text-blue-500 font-medium'
-                          : 'text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400'
+                        ? 'text-blue-500 font-medium'
+                        : 'text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400'
                         }`}
                       onClick={(e) => {
                         e.preventDefault();
