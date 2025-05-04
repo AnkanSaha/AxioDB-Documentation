@@ -27,8 +27,38 @@ console.log(deletedDocuments);`,
   { $skip: 0 } // Skip a certain number of results
 ]).exec();
 console.log(response);`,
-      fastRetrieval: `const fastDocument = await collection.query({ documentId: "S4ACDVS6SZ4S6VS" }).exec();
-console.log(fastDocument);`,
+      fastRetrieval: `// Retrieve a single document by documentId
+const singleDocument = await collection.query({ documentId: "S4ACDVS6SZ4S6VS" }).exec();
+console.log(singleDocument);
+
+// Retrieve multiple documents by an array of documentIds
+const multipleDocuments = await collection.query({ documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"] }).exec();
+console.log(multipleDocuments);
+
+// Retrieve documents with additional filters
+const filteredDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"],
+  age: { $gt: 20 }
+}).exec();
+console.log(filteredDocuments);
+
+// Retrieve documents with projection
+const projectedDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"]
+}).setProject({ name: 1, age: 1 }).exec();
+console.log(projectedDocuments);
+
+// Retrieve documents with sorting
+const sortedDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"]
+}).Sort({ age: -1 }).exec();
+console.log(sortedDocuments);
+
+// Retrieve documents with pagination
+const paginatedDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"]
+}).Limit(2).Skip(1).exec();
+console.log(paginatedDocuments);`,
     },
     es6: {
       read: `const documents = await collection.query({ age: { $gt: 20 } }).exec();
@@ -48,8 +78,38 @@ console.log(deletedDocuments);`,
   { $skip: 0 } // Skip a certain number of results
 ]).exec();
 console.log(response);`,
-      fastRetrieval: `const fastDocument = await collection.query({ documentId: "S4ACDVS6SZ4S6VS" }).exec();
-console.log(fastDocument);`,
+      fastRetrieval: `// Retrieve a single document by documentId
+const singleDocument = await collection.query({ documentId: "S4ACDVS6SZ4S6VS" }).exec();
+console.log(singleDocument);
+
+// Retrieve multiple documents by an array of documentIds
+const multipleDocuments = await collection.query({ documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"] }).exec();
+console.log(multipleDocuments);
+
+// Retrieve documents with additional filters
+const filteredDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"],
+  age: { $gt: 20 }
+}).exec();
+console.log(filteredDocuments);
+
+// Retrieve documents with projection
+const projectedDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"]
+}).setProject({ name: 1, age: 1 }).exec();
+console.log(projectedDocuments);
+
+// Retrieve documents with sorting
+const sortedDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"]
+}).Sort({ age: -1 }).exec();
+console.log(sortedDocuments);
+
+// Retrieve documents with pagination
+const paginatedDocuments = await collection.query({
+  documentId: ["S4ACDVS6SZ4S6VS", "S4ACDVS6SZ4S6VA"]
+}).Limit(2).Skip(1).exec();
+console.log(paginatedDocuments);`,
     },
   };
 
