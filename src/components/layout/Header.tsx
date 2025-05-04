@@ -27,8 +27,8 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-          ? 'bg-white dark:bg-gray-900 shadow-md py-2'
-          : 'bg-transparent py-4'
+        ? 'bg-white dark:bg-gray-900 shadow-md py-2'
+        : 'bg-transparent py-4'
         }`}
     >
       <div className="container mx-auto px-4">
@@ -52,8 +52,8 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
             <Link
               to="/features"
               className={`text-sm font-medium ${location.pathname === '/features'
-                  ? 'text-blue-500'
-                  : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
+                ? 'text-blue-500'
+                : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
                 }`}
             >
               Features
@@ -61,8 +61,8 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
             <Link
               to="/comparison"
               className={`text-sm font-medium ${location.pathname === '/comparison'
-                  ? 'text-blue-500'
-                  : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
+                ? 'text-blue-500'
+                : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
                 }`}
             >
               Comparison
@@ -70,8 +70,8 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
             <Link
               to="/installation"
               className={`text-sm font-medium ${location.pathname === '/installation'
-                  ? 'text-blue-500'
-                  : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
+                ? 'text-blue-500'
+                : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
                 }`}
             >
               Installation
@@ -79,8 +79,8 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
             <Link
               to="/usage"
               className={`text-sm font-medium ${location.pathname === '/usage'
-                  ? 'text-blue-500'
-                  : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
+                ? 'text-blue-500'
+                : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
                 }`}
             >
               Usage
@@ -88,11 +88,17 @@ const Header: React.FC<HeaderProps> = ({ toggleSidebar, isSidebarOpen }) => {
             <Link
               to="/api-reference"
               className={`text-sm font-medium ${location.pathname === '/api-reference'
-                  ? 'text-blue-500'
-                  : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
+                ? 'text-blue-500'
+                : 'text-gray-600 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400'
                 }`}
             >
               API
+            </Link>
+            <Link
+              to="/maintainers-zone"
+              className="text-gray-700 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
+            >
+              Maintainer's Zone
             </Link>
           </div>
 

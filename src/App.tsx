@@ -11,6 +11,7 @@ import Community from './components/content/Community';
 import Comparison from './components/content/Comparison';
 import CreateDatabase from './components/content/CreateDatabase';
 import CreateCollection from './components/content/CreateCollection';
+import MaintainersZone from './components/content/MaintainersZone';
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
           <Route path="/comparison" element={<Comparison />} />
           <Route path="/create-database" element={<CreateDatabase />} />
           <Route path="/create-collection" element={<CreateCollection />} />
+          <Route path="/maintainers-zone" element={<MaintainersZone />} />
         </Routes>
       </Layout>
     </Router>
