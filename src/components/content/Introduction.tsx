@@ -11,6 +11,7 @@ const Introduction: React.FC = () => {
         <img src="https://badge.fury.io/js/axiodb.svg" alt="npm version" className="h-6" />
         <img src="https://github.com/AnkanSaha/AxioDB/actions/workflows/github-code-scanning/codeql/badge.svg?branch=main" alt="CodeQL" className="h-6" />
         <img src="https://dl.circleci.com/status-badge/img/gh/AnkanSaha/AxioDB/tree/main.svg?style=svg" alt="CircleCI" className="h-6" />
+        <img src="https://socket.dev/api/badge/npm/package/axiodb" alt="Socket Security" className="h-6" />
       </div>
 
       <p className="text-lg mb-8 text-gray-700 dark:text-gray-300">

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { useNavigate, useLocation } from 'react-router-dom';
+import { useNavigate, useLocation, Link } from 'react-router-dom';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 
 interface SidebarSection {
@@ -51,8 +51,13 @@ const sidebarSections: SidebarSection[] = [
     title: "Community",
     items: [
       { id: "contributing", label: "Contributing", path: "/community#contributing" },
-      { id: "license", label: "License", path: "/community#license" },
       { id: "acknowledgments", label: "Acknowledgments", path: "/community#acknowledgments" },
+    ]
+  },
+  {
+    title: "Maintainer's Zone",
+    items: [
+      { id: "maintainers-zone", label: "Maintainer's Zone", path: "/maintainers-zone" },
     ]
   }
 ];
@@ -114,19 +119,16 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, setActiveSection }) => {
               <ul className="mt-2 space-y-1 pl-4">
                 {section.items.map((item) => (
                   <li key={item.id}>
-                    <a
-                      href={item.path}
+                    <Link
+                      to={item.path}
                       className={`block py-1 text-sm ${location.pathname === item.path || (location.hash && item.path.includes(location.hash))
                         ? 'text-blue-500 font-medium'
                         : 'text-gray-600 dark:text-gray-400 hover:text-blue-500 dark:hover:text-blue-400'
                         }`}
-                      onClick={(e) => {
-                        e.preventDefault();
-                        handleNavClick(item.path, item.id);
-                      }}
+                      onClick={() => handleNavClick(item.path, item.id)}
                     >
                       {item.label}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
